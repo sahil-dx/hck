@@ -1,0 +1,12 @@
+name: Schedule Job
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # every 5 minutes
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print message
+        run: echo "schedule workflow executed"
